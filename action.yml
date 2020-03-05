@@ -1,0 +1,24 @@
+name: 'Automation Send Report'
+description: 'This simple program, to Automation Send Report'
+author: 'sulaimantok'
+
+inputs:
+  SMTP:
+    description: "SMTP Server"
+    required: true
+    default: "smtp.gmail.com" 
+
+  USER:
+    description: "User email, will use to send Mail"
+    required: true
+    default: "user@kirim.com"
+
+  PASSWORD:
+    description: "Password from User Email"
+    required: true
+    default: "Password"
+
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

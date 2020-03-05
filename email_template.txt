@@ -1,0 +1,17 @@
+Dear [PIC_NAME],
+
+
+Berikut biaya server untuk project quest [QUEST_ID] ([PROJECT_ID])
+
+$ [COST_USD]
+atau
+Rp [COST_RP]
+(estimasi sesuai kurs saat ini)
+
+Kurs saat ini [KURS]
+
+Jika ada consern yang ingin disampaikan, silahkan balas email ini untuk detail nya
+
+Terima kasih
+
+*this is a test email" 
