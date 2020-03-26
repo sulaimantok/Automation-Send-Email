@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 i=0
 DATA=sample.csv
 SMTP=$INPUT_SMTP
@@ -41,5 +40,4 @@ do
 	i=$(( $i + 1 ))
 done < $DATA
 IFS=$OLDIFS
-
 echo "done"
