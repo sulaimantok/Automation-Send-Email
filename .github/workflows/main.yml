@@ -1,0 +1,13 @@
+name: A workflow for running script
+on: push
+jobs:
+  build:
+    name: Build send email
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ./
+        with:
+          SMTP: "smtp.mailtrap.io:587"
+          USER: "ac93ad95c762a0"
+          PASSWORD: "ac93ad95c762a0"
