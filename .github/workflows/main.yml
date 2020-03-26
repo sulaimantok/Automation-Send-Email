@@ -1,0 +1,13 @@
+name: A workflow for running script
+on: push
+jobs:
+  build:
+    name: Build send email
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./
+        with:
+          SMTP: ${{ secrets.SMTP }}
+          USER: ${{ secrets.MAIL_USER }}
+          PASSWORD: ${{ secrets.MAIL_PASSWORD }}
