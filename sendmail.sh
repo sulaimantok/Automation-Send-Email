@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 i=0
 DATA=sample.csv
 SMTP=$INPUT_SMTP
@@ -31,8 +30,8 @@ do
   		sed -i "s/\[KURS\]/$KURS/g" email-content.txt
   		
   		MESSAGE=$(cat email-content.txt)
-		sendEmail -o tls=yes -f ${]USER} -t ${EMAILS} -cc ${CC} -s ${SMTP} -xu ${USER} -xp ${PASSWORD} \
-		-u ${SUBJECT} -m "${MESSAGE}"
+		sendEmail -o tls=yes -f ${USER} -t ${EMAILS} -cc ${CC} -s ${SMTP} -xu ${USER} -xp ${PASSWORD} \
+		-u "${SUBJECT}" -m "${MESSAGE}"
 
 		rm email-content.txt
 
@@ -41,5 +40,4 @@ do
 	i=$(( $i + 1 ))
 done < $DATA
 IFS=$OLDIFS
-
 echo "done"
